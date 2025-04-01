@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Для неё</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { 
+      background: #ffebee; 
+      text-align: center; 
+      padding: 50px;
+      font-family: Arial, sans-serif;
+    }
+    #secret { 
+      display: none;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #ff6b81;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input {
+      padding: 10px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Введи пароль, солнышко</h1>
+  <input type="password" id="password" placeholder="День нашей первой встречи.">
+  <button onclick="checkPassword()">Открыть</button>
+
+  <div id="secret">
+    <h2>Ты сделала это! 💋</h2>
+    <p>«Спасибо, что ты есть...»</p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pass = "08.01.2025";
+      if (document.getElementById("password").value.toLowerCase() === pass) {
+        document.getElementById("secret").style.display = "block";
+      } else {
+        alert("Не-а, попробуй ещё!");
+      }
+    }
+  </script>
+</body>
+</html>
+
